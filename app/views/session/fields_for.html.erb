@@ -1,0 +1,31 @@
+<%= form_with model: @author, url: '/' do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+
+  <%= form.label :age %>
+  <%= form.number_field :age %>
+  <br>
+  
+  <%= form.label :account_detatils %>
+  <br>
+  <%= fields_for :account do |account_form|%>
+    <%= account_form.label :subscription_type %>
+    <%= account_form.select :subscription_type, @account_subscription_types %>
+    <br>
+  <% end %>
+
+  <%= form.label :book_detatils %>
+  <br>
+  <%= fields_for :books do |books_form| %>
+    <%= books_form.label :name %>
+    <%= books_form.text_field :name %>
+    <br>
+
+    <%= books_form.label :price %>
+    <%= books_form.number_field :price, step: 0.01 %>
+    <br>
+  <% end %>
+
+  <%= form.submit %>
+<% end %>

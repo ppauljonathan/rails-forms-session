@@ -1,0 +1,19 @@
+<%= form_with url: '/' do |form| %>
+  <%= form.label :pets, style: 'display: block' %>
+  <%= form.check_box :cat, checked: true %>
+  <%= form.label :cat %>
+  <br>
+  <%= form.check_box :dog , include_hidden: false%>
+  <%= form.label :dog %>
+  <br>
+  <%= form.check_box :fish %>
+  <%= form.label :fish %>
+  <br>
+
+  <%= form.radio_button :age, "child" %>
+  <%= form.label :age_child, "I am younger than 21" %>
+  <%= form.radio_button :age, "adult" %>
+  <%= form.label :age_adult, "I am over 21" %>
+
+  <%= form.submit %>
+<% end %>

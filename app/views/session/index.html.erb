@@ -1,0 +1,45 @@
+<%= form_with url: '/' do |form| %>
+<%# <%= form_with url: '/authors' do |form| %>
+<%# <%= form_with url: '/', method: :get do |form| %>
+<%# <%= form_with method: :get do |form| %>
+<%# <%= form_with method: :delete do |form| %>
+
+<%# <%= form_with format: :json do |form| %>
+<%#   <%= form.text_field :name %>
+
+
+<%# <%= form_with model: @author do |form| %>
+<%# <%= form_with model: @author, url: '/' do |form| %>
+<%# <%= form_with model: Author.new do |form| %>
+<%# <%= form_with model: [@author, @book], url: '/' do |form| %>
+
+
+<%# <%= form_with authenticity_token: false do |form| %>
+
+
+<%# <%= form_with local: false do |form| %>
+
+<%# <%= form_with scope: :author do |form| %>
+
+<%# <%= form_with builder: ExtendedTextField  do |form| %>
+
+<%# <%= form_with url: 'https://example.com' do |form| %>
+
+
+<%# <%= form_with id: 'new_form', class: 'text_forms', data: 'hello', html: { name: 'go' }  do |form| %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+<% end %>
+
+<h1>Other routes</h1>
+<ul>
+  <li><a href="session/check_box">check_box</a></li>
+  <li><a href="session/color_field ">color_field</a></li>
+  <li><a href="session/date_field">date_field</a></li>
+  <li><a href="session/email_field">email_field</a></li>
+  <li><a href="session/fields_for">fields_for</a></li>
+  <li><a href="session/file_field">file_field</a></li>
+  <li><a href="session/miscellaneous">miscellaneous</a></li>
+  <li><a href="session/collection_fields">collection_fields</a></li>
+  <li><a href="search">params</a></li>
+</ul>

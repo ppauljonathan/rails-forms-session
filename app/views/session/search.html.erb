@@ -1,0 +1,6 @@
+<%= form_with url: '/search', method: :get do |form| %>
+  <%= form.label :search %>
+  <%= form.search_field :search %>
+  <br>
+  <%= form.submit %>
+<% end %>

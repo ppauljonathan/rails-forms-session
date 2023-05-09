@@ -1,0 +1,6 @@
+<%= form_with url: '/', model: Author.new do |form| %>
+  <%= form.label :wall %>
+  <%= form.color_field :wall %>
+  <br>
+  <%= form.submit %>
+<% end %>

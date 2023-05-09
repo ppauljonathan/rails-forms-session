@@ -1,0 +1,14 @@
+<%= form_with url: '/' do |form| %>
+  <%= form.label :collection_select %>
+  <%= form.collection_select :select, Book.all, :id, :name %>
+  <br>
+
+  <%= form.label :collection_radio_buttons %>
+  <%= form.collection_radio_buttons :radio, Book.all, :id, :name %>
+  <br>
+
+  <%= form.label :collection_check_boxes %>
+  <%= form.collection_check_boxes :check, Book.all, :id, :name %>
+  <br>
+  <%= form.submit %>
+<% end %>

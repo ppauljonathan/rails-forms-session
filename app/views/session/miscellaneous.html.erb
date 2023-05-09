@@ -1,0 +1,56 @@
+<%= form_with url: '/' do |form| %>
+  <%= form.label :pass %>
+  <%= form.password_field :pass %>
+  <br>
+
+  <%= form.rich_text_area :content %> <%# only for trix editor  %>
+  <br>
+
+  <%= form.label :search %>
+  <%= form.search_field :search%>
+  <br>
+
+  <%= form.label :phone %>
+  <%= form.phone_field :phone %>
+  <br>
+
+  <%= form.label :textarea %>
+  <%= form.text_area :textarea %>
+  <br>
+  
+  <%= form.label :url %>
+  <%= form.url_field :url %>
+  <br>
+
+  <%= form.label :number %>
+  <%= form.number_field :number, in: (10..20), step: 0.1 %>
+  <br>
+
+  <%= form.label :range %>
+  <%= form.range_field :range, in: (0..100), step: 1 %>
+  <br>
+
+  <h2>SELECT</h2>
+  <br>
+
+  <%= form.label :city %>
+  <%= form.select :city, ['NOIDA', 'Delhi', 'Gr. NOIDA'], include_blank: 'Select One' %>
+  <br>
+
+  <%= form.label :choice %>
+  <%= form.select :choice, [["Berlin", "BE"], ["Chicago", "CHI"], ["Madrid", "MD"]], selected: "CHI" %>
+  <br>
+
+  <%= form.label :option_group %>
+  <%= form.select :option_group,
+      {
+        "Europe" => [ ["Berlin", "BE"], ["Madrid", "MD"] ],
+        "North America" => [ ["Chicago", "CHI"] ],
+      },
+      selected: "CHI" %>
+  <br>
+
+  <%= form.label :tz_select %>
+  <%= form.time_zone_select :tz_select %>
+  <%= form.submit %>
+<% end %>

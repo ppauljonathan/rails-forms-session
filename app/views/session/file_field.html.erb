@@ -1,0 +1,8 @@
+<%= form_with url: '/' do |form| %>
+  <%= form.label :file %>
+  <%= form.file_field :file, multiple: true, accept: 'image/png' %>
+  <br>
+
+  <%= form.hidden_field :time, value: Time.now %>
+  <%= form.submit %>
+<% end %>
